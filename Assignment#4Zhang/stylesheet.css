@@ -1,0 +1,70 @@
+.weeks, .week1, .week2, .week3, .week4, .week5{
+    display: flex;
+}
+
+.weather > h3, .special > h3, .theday > h3, .previousMonth > h3, .nextMonth > h3{
+    text-align: left;
+    position: relative;
+    left: 10px;
+    font-size: large;
+}
+
+.special > h3, .nextMonth > h3{
+    color: #2293C0;
+}
+
+.theday > h3{
+    color: #FF9954;
+}
+
+.week, body, .weather, .special, .theday, .previousMonth, .nextMonth{
+    max-width: 1500px;
+    text-align: center; 
+    background-color: #f7f7f7;
+    flex: 1;
+}
+
+.weather, .previousMonth{
+    border: 1px solid #BEBBBA;
+}
+
+.special, .nextMonth{
+    border: 1px solid #2293C0;
+}
+
+.theday{
+    border: 2px solid #FF9954;
+
+}
+
+.nextMonth, .previousMonth{
+    opacity: 0.3;
+}
+
+h3, .week, .in, .left, .right, .weatherCondition{
+    font-weight: bold;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    color: #BEBBBA;
+}
+p{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left{
+    color:#D7313A;
+}
+
+.right{
+    color:#63BCE5;
+}
+
+img{
+    height: 20%;
+    width: 30%;
+}
+

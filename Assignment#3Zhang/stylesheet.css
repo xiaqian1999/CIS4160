@@ -1,0 +1,25 @@
+body{
+    color:white;
+    background-color: chocolate;
+}
+
+img {
+    max-width: 250px;
+    border: 2px;
+}
+
+table th{
+    color: white;
+}
+
+.button{
+    font-size: medium;
+    color:chocolate;
+    background-color: white;
+    width: 150px;
+    height:50px;
+}
+
+#shippingInfo{
+    background-color: sandybrown;
+}
