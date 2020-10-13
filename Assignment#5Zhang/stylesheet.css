@@ -1,0 +1,26 @@
+
+img{
+    height: 45%;
+    width: 50%;
+}
+
+body{
+    margin: 30px;
+}
+
+.my-container{
+    background-color: #f7f7f7;
+    max-width: 1500px;
+    text-align: center; 
+    position: relative;
+    padding: 30px;
+}
+
+
+.left, .right, .day{
+    font-size: large;
+}
+
+.right, .day{
+    color:gray;
+}

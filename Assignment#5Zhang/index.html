@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecart pt.2</title>
+    <link href="stylesheet.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script>
+        let hightemp = [32, 41, 36, 29, 39, 37, 40];
+        let lowtemp = [18, 24, 20, 27, 30, 31, 27];
+        let date = new Date();
+        let day = date.getDay();
+
+        if(day == 0){
+            alert("Expect a high of [" + hightemp[0] +  "] and a low of [" + lowtemp[0] + "] today.")
+        } else if (day == 1) {
+            alert("Expect a high of [" + hightemp[1] + "] and a low of [" + lowtemp[1] + "] today.")
+        } else if (day == 2) {
+            alert("Expect a high of [" + hightemp[2] + "] and a low of [" + lowtemp[2] + "] today.")
+        } else if (day == 3) {
+            alert("Expect a high of [" + hightemp[3] + "] and a low of [" + lowtemp[3] + "] today.")
+        } else if (day == 4) {
+            alert("Expect a high of [" + hightemp[4] + "] and a low of [" + lowtemp[4] + "] today.")
+        } else if (day == 5) {
+            alert("Expect a high of [" + hightemp[5] + "] and a low of [" + lowtemp[5] + "] today.")
+        } else {
+            alert("Expect a high of [" + hightemp[6] + "] and a low of [" + lowtemp[6] + "] today.")
+        } 
+        
+        let avghightemp = (array) => array.reduce((a, b) => a + b) / array.length;
+        let avglowtemp = (array) => array.reduce((a, b) => a + b) / array.length;
+        
+        var totaltemp = new Array();
+        /* 你首先把所有的hightemp和lowtemp的数字相加起来， 每一个都加进totaltemp里，then try to find the max among this array,
+        找到max的index之后，use if else condition to return the day of the week, ex: if totaltemp[0] == max(value), 
+        return console.log("[Sunday] will be the warmest day of the week.")*/
+        totaltemp[0] = hightemp[0] + lowtemp[0];
+        totaltemp[1] = hightemp[1] + lowtemp[1];
+        totaltemp[2] = hightemp[2] + lowtemp[2];
+        totaltemp[3] = hightemp[3] + lowtemp[3];
+        totaltemp[4] = hightemp[4] + lowtemp[4];
+        totaltemp[5] = hightemp[5] + lowtemp[5];
+        totaltemp[6] = hightemp[6] + lowtemp[6];
+
+        let warmestDay = Math.max(...totaltemp)
+        console.log(warmestDay)
+        console.log("The average high temperature for this week is [" + avghightemp([32, 41, 36, 29, 39, 37, 40]) + "].");
+        console.log("The average low temperature for this week is [" + avglowtemp([18, 24, 20, 27, 30, 31, 27]) + "].");
+
+        if(warmestDay == 0){
+            console.log("Sunday will be the warmest day of the week.");
+        } else if (warmestDay == 1) {
+            console.log("Monday will be the warmest day of the week.");
+        } else if (warmestDay == 2) {
+            console.log("Tuesday will be the warmest day of the week.");
+        } else if (warmestDay == 3) {
+            console.log("Wednesday will be the warmest day of the week.");
+        } else if (warmestDay == 4) {
+            console.log("Thursday will be the warmest day of the week.");
+        } else if (warmestDay == 5) {
+            console.log("Friday will be the warmest day of the week.");
+        } else {
+            console.log("Saturday will be the warmest day of the week.");
+        } 
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid my-container">
+        <div class="row my-row">
+            <div class="col-sm my-col">
+                <span class="day">Sun</span><br>
+                <img src="https://www.kindpng.com/picc/m/178-1780507_sunny-weather-weather-line-icon-png-transparent-png.png">
+                <br><span class="left">32°</span> <span class="right">18°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Mon</span><br>
+                <img src="https://www.kindpng.com/picc/m/178-1780507_sunny-weather-weather-line-icon-png-transparent-png.png">
+                <br><span class="left">41°</span> <span class="right">24°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Tue</span><br>
+                <img src="https://www.kindpng.com/picc/m/178-1780507_sunny-weather-weather-line-icon-png-transparent-png.png">
+                <br><span class="left">36°</span> <span class="right">20°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Wed</span><br>
+                <img src="https://www.kindpng.com/picc/m/178-1780507_sunny-weather-weather-line-icon-png-transparent-png.png">
+                <br><span class="left">29°</span> <span class="right">27°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Thu</span><br>
+                <img src="https://www.kindpng.com/picc/m/178-1780507_sunny-weather-weather-line-icon-png-transparent-png.png">
+                <br><span class="left">39°</span> <span class="right">30°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Fri</span><br>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/cloud-rain-1895151-1605067.png">
+                <br><span class="left">37°</span> <span class="right">31°</span>
+            </div>
+            <div class="col-sm my-col">
+                <span class="day">Sat</span><br>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/cloud-rain-1895151-1605067.png">
+                <br><span class="left">40°</span> <span class="right">27°</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
